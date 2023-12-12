@@ -1,0 +1,85 @@
+.weather-fade-in {
+    animation: fadeIn 1s ease-in; 
+}
+
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+ }
+
+p {
+    font-weight: 500;
+}
+.container_city_name_temp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+
+}
+.city-name{
+    font-size: 60px; 
+}
+
+.temp_max_min{
+    border-left: 1px solid #cacaca;
+    padding-left: 10px;
+    color: #9c9c9c;
+}
+
+.main_temp_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    padding-right: 25px;
+}
+
+.main_temp_font{
+    font-size: 40px;
+}
+
+.informations{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.inf_icon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .main_temp_container{
+        margin-top: 20px;
+    }
+    .container_city_name_temp{
+        display: grid;
+        justify-content: center;
+    }
+    .temp_max_min{
+        padding: 0;
+        border-left: none;
+        display: flex;
+        justify-content: center;
+        gap:30px
+    }
+    .max-min{
+        display: flex;
+        justify-content: center;
+        gap:30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #cacaca;
+    }
+}
