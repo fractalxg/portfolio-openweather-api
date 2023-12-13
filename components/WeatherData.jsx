@@ -37,11 +37,13 @@ const Weather = ({weather}) => {
 						<p className="inf_icon"><FaDroplet />{data.list[0].main.humidity}%</p>
 						<p className="inf_icon"><FaWind />{data.list[0].wind.speed} km/h</p>
 					</div>
+					<p className="date-time">Data da consulta: {DateTime()}</p>
 					</div>	
+					
 				</div>
-
+				
 		))}
-		<p className="date-time">Data da consulta: {DateTime()}</p>
+		
 		</div>
 
 	)
