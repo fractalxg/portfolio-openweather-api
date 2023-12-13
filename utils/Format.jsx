@@ -15,5 +15,13 @@ const Capitalize = (str) => {
     return capString
 }
 
-export {Temperature, Capitalize}
+const DateTime = () => {
+    const timeElapsed = Date.now()
+    const today = new Date(timeElapsed)
+    const dateTime = `${today.toLocaleDateString()} ${today.toLocaleTimeString()}`
+
+    return dateTime
+}
+
+export {Temperature, Capitalize, DateTime}
 

@@ -3,6 +3,7 @@ import axios from 'axios';
 import WeatherData from '../components/WeatherData';
 import { FaSearch } from "react-icons/fa";
 import "./Home.css"
+import WeekWeatherData from '../components/WeekWeatherData';
 
 const api_key = import.meta.env.VITE_API_KEY
 const url_forecast = "https://api.openweathermap.org/data/2.5/forecast?q="
@@ -57,6 +58,7 @@ const Home = () => {
 				</div>
 					
 				{weather && <WeatherData weather={weather}/>}
+				{/* {weather && <WeekWeatherData weather={weather}/>} */}
 			</form>			
 
 		)

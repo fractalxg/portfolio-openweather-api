@@ -1,10 +1,14 @@
 import {WeatherIcon} from "./WeatherIcon"
 import "./WeatherData.css"
-import {Temperature, Capitalize} from "../utils/Format"
+import {Temperature, Capitalize, DateTime} from "../utils/Format"
 import { FaWind } from "react-icons/fa";
 import { FaDroplet } from "react-icons/fa6";
 
 const Weather = ({weather}) => {
+
+	const timeElapsed = Date.now()
+    const today = new Date(timeElapsed)
+
 	return (
 		<div>
 		{weather && weather.map((data) => (
@@ -21,10 +25,9 @@ const Weather = ({weather}) => {
 							<p>{Temperature(data.list[0].main.temp_max)}</p>
 							<p>{Temperature(data.list[0].main.temp_min)}</p>
 						</div>		
-						
 					</div>
 					<div className="main_temp_container">
-						<WeatherIcon icon = {data.list[0].weather[0].icon}/>
+						<WeatherIcon icon = {data.list[0].weather[0].icon} size = 'max'/>
 						<div className="description">
 							<p className="main_temp_font">{Temperature(data.list[0].main.temp)}</p>
 							<p className="main_temp_description">{Capitalize(data.list[0].weather[0].description)}</p>	
@@ -34,17 +37,13 @@ const Weather = ({weather}) => {
 						<p className="inf_icon"><FaDroplet />{data.list[0].main.humidity}%</p>
 						<p className="inf_icon"><FaWind />{data.list[0].wind.speed} km/h</p>
 					</div>
-					</div>
-		
-					
-					
-					
-					
-					
+					</div>	
 				</div>
 
 		))}
+		<p className="date-time">Data da consulta: {DateTime()}</p>
 		</div>
+
 	)
 }
 		
