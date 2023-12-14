@@ -6,9 +6,6 @@ import { FaDroplet } from "react-icons/fa6";
 
 const Weather = ({weather}) => {
 
-	const timeElapsed = Date.now()
-    const today = new Date(timeElapsed)
-
 	return (
 		<div>
 		{weather && weather.map((data) => (

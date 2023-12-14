@@ -4,6 +4,8 @@ import WeatherData from '../components/WeatherData';
 import { FaSearch } from "react-icons/fa";
 import "./Home.css"
 import WeekWeatherData from '../components/WeekWeatherData';
+import Loader from '../utils/Loader';
+
 
 const api_key = import.meta.env.VITE_API_KEY
 const url_forecast = "https://api.openweathermap.org/data/2.5/forecast?q="
@@ -13,7 +15,9 @@ const Home = () => {
 	const [weather, setWeather] = useState([]);
 	
 	const getWeather = async () => {
-		const formData = formRef.current;
+	const formData = formRef.current;
+	setWeather([])
+
 
     try {
 
@@ -56,8 +60,11 @@ const Home = () => {
 					<input type="text" name="search" placeholder="Pesquisar..."></input>
 					<button type="submit"><FaSearch className="search-icon"/></button>
 				</div>
-					
-				{weather && <WeatherData weather={weather}/>}
+				
+				<div className="weather-container">
+				{weather.length === 0 ? <Loader /> : <WeatherData weather={weather}/>}
+				</div>
+				
 				{/* {weather && <WeekWeatherData weather={weather}/>} */}
 			</form>			
 

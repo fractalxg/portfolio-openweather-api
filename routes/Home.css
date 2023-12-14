@@ -43,3 +43,9 @@
 .search-container input:focus::placeholder {
     color: transparent;
 }
+
+.weather-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
