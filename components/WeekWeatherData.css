@@ -11,3 +11,42 @@
         opacity:1;  
     }  
  }
+
+.week-weather{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+}
+ .weather{
+    display: flex;
+ }
+ .temp{
+    display: grid;
+    align-items: center;
+    font-size: 14px;
+ }
+
+ @media screen and (max-width: 800px) {
+    .week-weather{
+        display: grid;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+    .days{
+        display: flex;
+        align-items: center;
+    }
+    .days p{
+        padding-right: 10px;
+    }
+    .border-true{
+        border-right: 1px solid #cacaca;
+    }
+    .temp{
+        display: flex;
+        gap: 10px;
+    }
+
+ }
