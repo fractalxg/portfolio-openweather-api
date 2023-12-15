@@ -22,18 +22,23 @@ p {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: -140px;
+    margin-top: -70px;
 
 }
 .city-name{
     font-size: 60px; 
     padding-bottom: 5px;
+    color: var(--font-color);
 }
 
 .temp_max_min{
     border-left: 1px solid #cacaca;
     padding-left: 10px;
     color: #9c9c9c;
+}
+
+.max-min {
+    color: var(--font-color);
 }
 
 .main_temp_container{

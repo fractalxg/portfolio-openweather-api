@@ -4,7 +4,8 @@ import WeatherData from '../components/WeatherData';
 import { FaSearch } from "react-icons/fa";
 import "./Home.css"
 import WeekWeatherData from '../components/WeekWeatherData';
-import Loader from '../utils/Loader';
+import Loader from '../components/Loader';
+import Switch from '../components/Switch';
 
 
 const api_key = import.meta.env.VITE_API_KEY
@@ -60,8 +61,8 @@ const Home = () => {
 		
 		return (
 			
-			<form ref={formRef} onSubmit={handleSubmit}>
-			
+			<form ref={formRef} onSubmit={handleSubmit} className="form">
+			<Switch />
 			<div className="search-container">
 				<input type="text" name="search" placeholder="Pesquisar..."></input>
 				<button type="submit"><FaSearch className="search-icon"/></button>

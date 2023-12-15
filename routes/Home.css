@@ -1,10 +1,14 @@
-
+.form {
+    height: 110vh;
+    background-color: var(--background-color);
+    transition: 0.5s;
+}
 .search-container{
     margin-top: 30px;
     display: flex;
     gap: 10px;
     justify-content: center;
-
+  
 }
 .search-container button {
     display: flex;
@@ -13,17 +17,18 @@
     width: 200px;
     height: 50px;
     cursor: pointer;
-    color:#fff;
-    background-color: #000;
-    transition: 0.5s;
-    border: solid 2px #000;
-    margin-right: 10px
+    color: var(--button-hover-background-color);
+    background-color: var(--button-background-color);
+    border: solid 2px var(--button-background-color);
+    margin-right: 10px;
+    transition: 0.3s;
 }
 .search-container button:hover{
-    border: solid 2px #000;
-    color:#000;
-    background-color: #fff;
-    transition: 0.5s;
+    border: solid 2px var(--button-background-color);
+    color: var(--button-background-color);
+    background-color: var(--button-hover-background-color);
+    transition: 0.3s;
+
 }
 
 .search-icon {
@@ -36,16 +41,18 @@
     text-align: center;
     width: 400px;
     font-size: 15px;
-    border: solid 1px #000;
-    margin-left: 10px
+    border: solid 1px var(--font-color);
+    margin-left: 10px;
+    transition: 0.3s;
 }
 
 .search-container input:focus::placeholder {
     color: transparent;
-}
 
+}
 .weather-container{
     display: flex;
     justify-content: center;
     margin-top: 200px;
 }
+
