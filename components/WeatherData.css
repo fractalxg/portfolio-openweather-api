@@ -76,7 +76,12 @@ p {
 }
 
 @media screen and (max-width: 530px) {
+    p {
+        font-weight: 400;
+        font-size: small;
+    }
     .city-name{
+        margin-top: -60px;
         font-size: 45px; 
     }
     .main_temp_container{
@@ -100,4 +105,5 @@ p {
         padding-bottom: 30px;
         border-bottom: 1px solid #cacaca;
     }
+
 }

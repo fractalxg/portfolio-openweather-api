@@ -61,27 +61,29 @@ const Home = () => {
 		},[weather])
 		
 		return (
-			
-			<form ref={formRef} onSubmit={handleSubmit} className="form">
+			<div className="container">
+				<form ref={formRef} onSubmit={handleSubmit} className="form">
 
-			<Header />
-			<div className="search-container">
-				<input type="text" name="search" placeholder="Pesquisar..."></input>
-				<button type="submit"><FaSearch className="search-icon"/></button>
+				<Header />
+				<div className="search-container">
+					<input type="text" name="search" placeholder="Pesquisar..."></input>
+					<button type="submit"><FaSearch className="search-icon"/></button>
+				</div>
+
+				<div className="weather-container">
+					{	
+						// weather.length === 0 ? <Loader /> : 
+						loading === "" ? <p></p> :
+						loading === "error" ? <p>Não foi possível consultar o termo digitado.</p> :
+						loading === "loading" ? <Loader /> :
+						weather && <WeatherData weather={weather}/>
+					}
+				</div>
+
+				{weather && <WeekWeatherData weather={weather}/>}
+				</form>	
 			</div>
-			
-			<div className="weather-container">
-				{	
-					// weather.length === 0 ? <Loader /> : 
-					loading === "" ? <p></p> :
-					loading === "error" ? <p>Não foi possível consultar o termo digitado.</p> :
-					loading === "loading" ? <Loader /> :
-					weather && <WeatherData weather={weather}/>
-				}
-			</div>
-			
-			{weather && <WeekWeatherData weather={weather}/>}
-			</form>			
+					
 			
 			)
 		}
