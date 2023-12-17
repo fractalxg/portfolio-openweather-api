@@ -4,4 +4,4 @@
 
 
 Aplicação web (e responsiva para dispositivos móveis) que permite realizar a consulta de clima e informações sobre determinada região/cidade. 
-Versão 1.2
+Versão 1.3
