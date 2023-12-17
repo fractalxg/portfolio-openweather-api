@@ -1,10 +1,11 @@
 .loader {
-    border: 3px solid #e7e7e7; 
-    border-top: 3px solid #757575; 
+    border: 3px solid #00000000; 
+    border-top: 3px solid #EC6E4C; 
     border-radius: 50%;
     width: 30px;
     height: 30px;
     animation: spin 0.5s linear infinite;
+
   }
   
   @keyframes spin {

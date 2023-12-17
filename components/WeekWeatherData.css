@@ -21,7 +21,7 @@ p {
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 5vh;
 }
  .weather{
     display: flex;

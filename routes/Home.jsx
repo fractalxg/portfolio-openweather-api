@@ -6,6 +6,7 @@ import "./Home.css"
 import WeekWeatherData from '../components/WeekWeatherData';
 import Loader from '../components/Loader';
 import Switch from '../components/Switch';
+import Header from '../components/Header';
 
 
 const api_key = import.meta.env.VITE_API_KEY
@@ -62,7 +63,8 @@ const Home = () => {
 		return (
 			
 			<form ref={formRef} onSubmit={handleSubmit} className="form">
-			<Switch />
+
+			<Header />
 			<div className="search-container">
 				<input type="text" name="search" placeholder="Pesquisar..."></input>
 				<button type="submit"><FaSearch className="search-icon"/></button>
