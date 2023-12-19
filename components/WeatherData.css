@@ -76,20 +76,23 @@ p {
 }
 
 @media screen and (max-width: 530px) {
-    p {
-        font-weight: 400;
-        font-size: small;
-    }
+
     .city-name{
         margin-top: -60px;
         font-size: 45px; 
+        font-weight: 400;
+        
     }
     .main_temp_container{
         margin-top: 20px;
+        font-weight: 400;
+        font-size: small;
     }
     .container_city_name_temp{
         display: grid;
         justify-content: center;
+        font-weight: 400;
+        font-size: small;
     }
     .temp_max_min{
         padding: 0;
@@ -97,6 +100,7 @@ p {
         display: flex;
         justify-content: center;
         gap:30px
+        
     }
     .max-min{
         display: flex;
@@ -104,6 +108,12 @@ p {
         gap:30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #cacaca;
+        
     }
+    .date-time {
+        font-weight: 400;
+        font-size: small;
+    }
+
 
 }

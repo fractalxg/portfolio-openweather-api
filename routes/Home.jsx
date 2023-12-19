@@ -7,6 +7,7 @@ import WeekWeatherData from '../components/WeekWeatherData';
 import Loader from '../components/Loader';
 import Switch from '../components/Switch';
 import Header from '../components/Header';
+import Population from '../components/Population';
 
 
 const api_key = import.meta.env.VITE_API_KEY
@@ -80,9 +81,18 @@ const Home = () => {
 					}
 				</div>
 
+
 				{weather && <WeekWeatherData weather={weather}/>}
+				{weather && <Population weather={weather}/>}
+
+
+				
 				</form>	
+				
+				
+
 			</div>
+			
 					
 			
 			)
