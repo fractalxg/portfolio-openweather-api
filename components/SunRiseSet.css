@@ -1,0 +1,61 @@
+.sunriseset-container {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+
+    background-color: var(--background-color);
+    transition: 0.5s;
+    background-image: url("../images/Background - 3.png");
+    background-size: cover;
+}
+
+.sunrise {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: start;
+    padding-left: 100px;
+
+}
+
+.sunrise-text{
+    font-size: 60px;
+}
+.sunrise-data{
+    color: #EC6E4C;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sunset {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: end;
+    padding-right: 100px;
+
+}
+
+.sunset-text{
+    font-size: 60px;
+}
+
+@media screen and (max-width: 530px) {
+    .sunrise {
+        padding-left: 10px;
+
+    }
+    
+    .sunrise-text{
+        font-size: 30px;
+    }
+
+    
+    .sunset {
+        padding-right: 10px;
+    }
+    
+    .sunset-text{
+        font-size: 30px;
+    }
+}

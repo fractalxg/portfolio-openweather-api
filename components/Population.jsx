@@ -5,7 +5,7 @@ const AnimatedPopulation = ({ population }) => {
   const [displayedPopulation, setDisplayedPopulation] = useState(0)
 
   useEffect(() => {
-    const populationDecrease = 200
+    const populationDecrease = 500
     const velocity = 1000
     let startPopulation = population - populationDecrease > 0 ? population - populationDecrease : 0 
     const populationIncrement = (population - startPopulation) / populationDecrease
@@ -26,6 +26,8 @@ const AnimatedPopulation = ({ population }) => {
 }
 
 const Population = ({ weather }) => {
+    
+
   return (
     <div>
       {weather &&

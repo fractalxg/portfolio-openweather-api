@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 import Switch from '../components/Switch';
 import Header from '../components/Header';
 import Population from '../components/Population';
+import SunRiseSet from '../components/SunRiseSet';
 
 
 const api_key = import.meta.env.VITE_API_KEY
@@ -83,7 +84,9 @@ const Home = () => {
 
 
 				{weather && <WeekWeatherData weather={weather}/>}
+				{weather && <SunRiseSet weather={weather}/>}
 				{weather && <Population weather={weather}/>}
+				
 
 
 				
