@@ -5,10 +5,10 @@ import { FaSearch } from "react-icons/fa";
 import "./Home.css"
 import WeekWeatherData from '../components/WeekWeatherData';
 import Loader from '../components/Loader';
-import Switch from '../components/Switch';
 import Header from '../components/Header';
 import Population from '../components/Population';
 import SunRiseSet from '../components/SunRiseSet';
+
 
 
 const api_key = import.meta.env.VITE_API_KEY
@@ -65,8 +65,8 @@ const Home = () => {
 		return (
 			<div className="container">
 				<form ref={formRef} onSubmit={handleSubmit} className="form">
-
 				<Header />
+			
 				<div className="search-container">
 					<input type="text" name="search" placeholder="Pesquisar..."></input>
 					<button type="submit"><FaSearch className="search-icon"/></button>
@@ -82,22 +82,15 @@ const Home = () => {
 					}
 				</div>
 
-
 				{weather && <WeekWeatherData weather={weather}/>}
 				{weather && <SunRiseSet weather={weather}/>}
 				{weather && <Population weather={weather}/>}
+				</form>
 				
-
-
-				
-				</form>	
-				
-				
-
+					
 			</div>
 			
-					
-			
+
 			)
 		}
 		

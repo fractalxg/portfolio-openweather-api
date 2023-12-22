@@ -1,0 +1,47 @@
+.footer-container{
+    height: 200px;
+    background-color: #48484A;
+    border-top: 5px #EC6E4C solid;
+    position:relative;
+    bottom: 0;
+    background-image: url("../images/Background - 4.svg");
+    background-size:contain;
+    background-position: center;
+    display: flex;
+    
+}
+
+
+.footer-sun{
+    padding-top:10px;
+    padding-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.arrow-up{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-top{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff00;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    padding-top: 45px;
+    padding-left: 140px;
+}
+
+.footer-bird{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    padding-top:30px;
+    padding-right: 50px;
+}

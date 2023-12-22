@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Population.css'
+import Footer from './Footer'
 
 const AnimatedPopulation = ({ population }) => {
   const [displayedPopulation, setDisplayedPopulation] = useState(0)
@@ -41,8 +42,11 @@ const Population = ({ weather }) => {
                 <AnimatedPopulation population={data.city.population} />
               </div>
             </div>
+            <Footer />
           </div>
+          
         ))}
+        
     </div>
   )
 }

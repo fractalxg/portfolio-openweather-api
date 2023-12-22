@@ -4,8 +4,11 @@
     height: 100vh;
     background-color: var(--background-color);
     transition: 0.5s;
-    background-image: url("../images/Background.png");
-    background-size:cover;
+    background-image: url("../images/Background.svg");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .search-container{
