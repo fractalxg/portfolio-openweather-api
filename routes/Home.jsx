@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 import Header from '../components/Header';
 import Population from '../components/Population';
 import SunRiseSet from '../components/SunRiseSet';
+import SearchImage from "../images/Search-Image.svg"
 
 
 
@@ -17,11 +18,10 @@ const url_forecast = "https://api.openweathermap.org/data/2.5/forecast?q="
 const Home = () => {
 	const formRef = useRef();
 	const [weather, setWeather] = useState([]);
-	const [loading, setLoading] = useState(null)
+	const [loading, setLoading] = useState("")
 	
 	const getWeather = async () => {
 		setWeather([])
-		setLoading("")
 
 		const formData = formRef.current;
 		
@@ -75,7 +75,7 @@ const Home = () => {
 				<div className="weather-container">
 					{	
 						// weather.length === 0 ? <Loader /> : 
-						loading === "" ? <p></p> :
+						loading === "" ? <img className="search-img" src={SearchImage}/> :
 						loading === "error" ? <p>Não foi possível consultar o termo digitado.</p> :
 						loading === "loading" ? <Loader /> :
 						weather && <WeatherData weather={weather}/>
