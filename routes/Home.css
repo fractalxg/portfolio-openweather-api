@@ -1,14 +1,11 @@
 
 .form {
-    width: 100vw;
-    height: 100vh;
     background-color: var(--background-color);
     transition: 0.5s;
     background-image: url("../images/Background.svg");
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 .search-container{
